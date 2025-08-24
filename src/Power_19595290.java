@@ -6,10 +6,12 @@
   Class Day:
   Class Time:
 */
-
 public class Power_19595290 {
 
   public static long power(int base, int exponent) {
+    base = validateNonNegative(base);
+    exponent = validateNonNegative(exponent);
+
     long result = 1;
     for (int i = 0; i < exponent; i++) {
       result *= base;
